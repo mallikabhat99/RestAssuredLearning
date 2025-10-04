@@ -1,32 +1,26 @@
 package restassured.googleapi;
 
-import io.restassured.path.json.JsonPath;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import restassured.payload.payload;
 
+import io.restassured.path.json.JsonPath;
+
 public class SumValidation {
-
-    @Test(enabled = true, priority = 1)
-    public void sumValidation() {
-        JsonPath js = new JsonPath(payload.coursePrice());
-
-        int purchaseAmount = js.getInt("dashboard.purchaseAmount");
-        System.out.println(purchaseAmount);
-
-        int courseCount = js.getInt("courses.size()");
-        System.out.println("Verify if Sum of all Course prices matches with Purchase Amount");
+    @Test
+    public void sumOfCourses() {
         int sum = 0;
-        for (int i = 0; i < courseCount; i++) {
-            int perCopyPrice = js.getInt("courses[" + courseCount + "].price");
-            int copiesCount = js.getInt("courses[" + courseCount + "].copies");
-            int amount = perCopyPrice * copiesCount;
+        JsonPath js = new JsonPath(payload.coursePrice());
+        int count = js.getInt("courses.size()");
+        for (int i = 0; i < count; i++) {
+            int price = js.getInt("courses[" + i + "].price");
+            int copies = js.getInt("courses[" + i + "].copies");
+            int amount = price * copies;
+            System.out.println(amount);
             sum = sum + amount;
-            System.out.println(sum);
         }
+        System.out.println(sum);
+        int purchaseAmount = js.getInt("dashboard.purchaseAmount");
         Assert.assertEquals(sum, purchaseAmount);
-
     }
-
-
 }

@@ -1,48 +1,47 @@
 package restassured.googleapi;
 
-import io.restassured.path.json.JsonPath;
-import org.testng.annotations.Test;
 import restassured.payload.payload;
+import io.restassured.path.json.JsonPath;
 
 public class ComplexJsonParse {
-/* 1.Print No of courses returned by API
-2.Print Purchase Amount
-3. Print Title of the first course
-4. Print All course titles and their respective Prices
-5. Print no of copies sold by RPA Course
-6. Verify if Sum of all Course prices matches with Purchase Amount*/
-
-    @Test(enabled = true, priority = 1)
-    public void complexJsonTest() {
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
         JsonPath js = new JsonPath(payload.coursePrice());
-        int courseCount = js.getInt("courses.size()");
-        System.out.println(courseCount);
+        //Print No of courses returned by API
 
-        int purchaseAmount = js.getInt("dashboard.purchaseAmount");
-        System.out.println(purchaseAmount);
+        int count = js.getInt("courses.size()");
+        System.out.println(count);
+//Print Purchase Amount
+        int totalAmount = js.getInt("dashboard.purchaseAmount");
+        System.out.println(totalAmount);
+//Print Title of the first course
 
-        String firstCourseTitle = js.getString("courses[0].title");
-        System.out.println(firstCourseTitle);
+        String titleFirstCourse = js.get("courses[0].title");
+        System.out.println(titleFirstCourse);
 
-        //4. Print All course titles and their respective Prices
-        for (int i = 0; i < courseCount; i++) {
-           String courseTitle =  js.getString("courses[" + courseCount + "].title");
-           int price = js.get("courses[" + courseCount + "].price");
-           System.out.println(courseTitle + " Course title");
-           System.out.println(price + " price");
+        //Print All course titles and their respective Prices
+
+        for (int i = 0; i < count; i++) {
+            String courseTitles = js.getString("courses[" + i + "].title");
+            System.out.println(js.getInt("courses[" + i + "].price"));
+            System.out.println(courseTitles);
+
         }
+        //Print no of copies sold by RPA Course
 
-        System.out.println("No of courses sold by RPA");
-        for (int i = 0; i < courseCount; i++) {
-            String courseTitle =  js.getString("courses[" + courseCount + "].title");
-            if (courseTitle.equalsIgnoreCase("RPA")){
-                int copiesRPA = js.get("courses[" + courseCount + "].copies");
-                System.out.println(copiesRPA + "RPA course copies");
+        System.out.println("Print no of copies sold by RPA Course");
+        for (int i = 0; i < count; i++) {
+            String courseTitles = js.get("courses[" + i + "].title");
+            if (courseTitles.equalsIgnoreCase("RPA")) {
+                int copies = js.get("courses[" + i + "].copies");
+                System.out.println(copies);
                 break;
             }
-        }
 
+
+        }
 
 
     }
+
 }
