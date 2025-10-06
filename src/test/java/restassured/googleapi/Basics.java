@@ -9,6 +9,10 @@ import org.testng.annotations.Test;
 import restassured.payload.ReusableMethods;
 import restassured.payload.payload;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
@@ -16,12 +20,12 @@ import static org.hamcrest.Matchers.equalTo;
 public class Basics {
 
     @Test(enabled = true, priority = 1)
-    public void addPlace() {
+    public void addPlace() throws IOException {
         RestAssured.baseURI = "https://rahulshettyacademy.com";
         String response = given().log().all()
                 .queryParam("key", "qaclick123")
                 .header("Content-Type", "application/json")
-                .body(payload.addPlacePayload())
+                .body(generatePayloadFromJson("C:\\Users\\LAPTOPS24\\Documents\\TestData\\addplace.json"))
                 .when().post("maps/api/place/add/json")
                 .then().log().all()
                 .assertThat().statusCode(200).body("scope", equalTo("APP")).header("Server", "Apache/2.4.52 (Ubuntu)")
@@ -53,5 +57,9 @@ public class Basics {
         String updatedAdd = get.getString("address");
         System.out.println(updatedAdd);
 
+    }
+
+    public String generatePayloadFromJson(String path) throws IOException {
+        return new String(Files.readAllBytes(Paths.get(path)));
     }
 }
