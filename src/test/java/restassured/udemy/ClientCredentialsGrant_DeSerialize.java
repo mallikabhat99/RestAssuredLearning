@@ -1,4 +1,4 @@
-package restassured.googleapi;
+package restassured.udemy;
 import static io.restassured.RestAssured.given;
 
 import java.util.ArrayList;
@@ -10,7 +10,7 @@ import restassured.pojo.Api;
 import restassured.pojo.GetCourse;
 import restassured.pojo.WebAutomation;
 
-public class ClientCredentialsGrant {
+public class ClientCredentialsGrant_DeSerialize {
     public static void main(String[] args) throws InterruptedException {
         String[] courseTitles = {"Selenium Webdriver Java","Cypress","Protractor"};
         String response =

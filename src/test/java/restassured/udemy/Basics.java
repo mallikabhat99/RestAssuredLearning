@@ -1,10 +1,8 @@
-package restassured.googleapi;
+package restassured.udemy;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import restassured.payload.ReusableMethods;
 import restassured.payload.payload;
@@ -14,7 +12,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 import static org.hamcrest.Matchers.equalTo;
 
 public class Basics {

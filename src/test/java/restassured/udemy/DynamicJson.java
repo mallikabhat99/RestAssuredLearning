@@ -1,4 +1,4 @@
-package restassured.googleapi;
+package restassured.udemy;
 
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;

@@ -1,4 +1,4 @@
-package restassured.googleapi;
+package restassured.udemy;
 
 public class OAuthClientCredentials {
     //Authorization Server EndPoint:

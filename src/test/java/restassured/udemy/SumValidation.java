@@ -1,4 +1,4 @@
-package restassured.googleapi;
+package restassured.udemy;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
