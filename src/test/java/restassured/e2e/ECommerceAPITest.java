@@ -23,23 +23,32 @@ public class ECommerceAPITest {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 //SSL
-        RequestSpecification req = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").setContentType(ContentType.JSON).build();
+        RequestSpecification req = new RequestSpecBuilder()
+                .setBaseUri("https://rahulshettyacademy.com").setContentType(ContentType.JSON).build();
 
         LoginRequest loginRequest = new LoginRequest();
         loginRequest.setUserEmail("rahulshetty@gmail.com");
         loginRequest.setUserPassword("Iamking@000");
 
         RequestSpecification reqLogin = given().relaxedHTTPSValidation().log().all().spec(req).body(loginRequest);
-        LoginResponse loginResponse = reqLogin.when().post("/api/ecom/auth/login").then().log().all().extract().response().as(LoginResponse.class);
-        System.out.println(loginResponse.getToken());
+        LoginResponse loginResponse = reqLogin.when().post("/api/ecom/auth/login").then().log().all()
+                .extract().response().as(LoginResponse.class);
         String token = loginResponse.getToken();
-        System.out.println(loginResponse.getUserId());
         String userId = loginResponse.getUserId();
 
 
-        //Add Product
-        RequestSpecification addProductBaseReq = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addHeader("authorization", token).build();
-        RequestSpecification reqAddProduct = given().log().all().spec(addProductBaseReq).param("productName", "Laptop").param("productAddedBy", userId).param("productCategory", "fashion").param("productSubCategory", "shirts").param("productPrice", "11500").param("productDescription", "Lenova").param("productFor", "men").multiPart("productImage", new File("C:\\Users\\LAPTOPS24\\Downloads\\shoe.jpg"));
+        //Add Product // formdata added as .param() - here content type is not json
+        RequestSpecification addProductBaseReq = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com")
+                .addHeader("authorization", token).build();
+        RequestSpecification reqAddProduct = given().log().all().spec(addProductBaseReq)
+        .param("productName", "Laptop")
+                .param("productAddedBy", userId)
+                .param("productCategory", "fashion")
+                .param("productSubCategory", "shirts")
+                .param("productPrice", "11500")
+                .param("productDescription", "Lenova")
+                .param("productFor", "men")
+                .multiPart("productImage", new File("C:\\Users\\LAPTOPS24\\Downloads\\shoe.jpg"));
 
         String addProductResponse = reqAddProduct.when().post("/api/ecom/product/add-product").then().log().all().extract().response().asString();
         JsonPath js = new JsonPath(addProductResponse);
@@ -61,7 +70,7 @@ public class ECommerceAPITest {
         String responseAddOrder = createOrderReq.when().post("/api/ecom/order/create-order").then().log().all().extract().response().asString();
         System.out.println(responseAddOrder);
 
-//Delete Product
+        //Delete Product
         RequestSpecification deleteProdBaseReq = new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addHeader("authorization", token).setContentType(ContentType.JSON).build();
         RequestSpecification deleteProdReq = given().log().all().spec(deleteProdBaseReq).pathParam("productId", productId);
         String deleteProductResponse = deleteProdReq.when().delete("/api/ecom/product/delete-product/{productId}").then().log().all().extract().response().asString();
