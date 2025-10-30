@@ -19,10 +19,8 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
 public class SpecBuilder {
-
     @Test(enabled = true, priority = 1)
     public void addPlace() throws IOException {
-
         AddPlace p = getAddPlace();
         RequestSpecification req =new RequestSpecBuilder().setBaseUri("https://rahulshettyacademy.com").addQueryParam("key", "qaclick123")
                 .setContentType(ContentType.JSON).build();

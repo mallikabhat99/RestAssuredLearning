@@ -29,6 +29,6 @@ public class JIRABugTest {
                 .multiPart("file", new File("C:\\Users\\LAPTOPS24\\Pictures\\Screenshots\\image.jpg"))
                 .log().all().post("rest/api/3/issue/{key}/attachments").then().log().all().
                 assertThat().statusCode(200);
-        //Add attachment		 		 		 		 		 							}
+        //Add attachment
     }
 }
