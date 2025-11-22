@@ -1,8 +1,7 @@
-package restassured.stringexamples;
+package restassured.interview.stringexamples;
 
 import java.util.*;
 import java.lang.*;
-import java.io.*;
 
 class RemoveDuplicateNumbers
 {

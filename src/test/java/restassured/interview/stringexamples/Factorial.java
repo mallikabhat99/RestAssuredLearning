@@ -1,4 +1,4 @@
-package restassured.stringexamples;
+package restassured.interview.stringexamples;
 
 import java.util.Scanner;
 

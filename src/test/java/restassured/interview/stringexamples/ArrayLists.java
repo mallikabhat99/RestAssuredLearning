@@ -1,7 +1,6 @@
-package restassured.stringexamples;
+package restassured.interview.stringexamples;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

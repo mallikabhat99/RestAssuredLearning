@@ -1,8 +1,7 @@
-package restassured.stringexamples;
+package restassured.interview.stringexamples;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.StringJoiner;
 
 public class ArrayBasics {
     public static void main(String[] args) {

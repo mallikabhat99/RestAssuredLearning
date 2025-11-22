@@ -1,4 +1,4 @@
-package restassured.stringexamples;
+package restassured.interview.stringexamples;
 
 public class StringBuilderExample {
     public static void main(String[] args) {
