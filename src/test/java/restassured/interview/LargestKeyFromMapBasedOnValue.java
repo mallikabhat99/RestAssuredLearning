@@ -9,6 +9,24 @@ public class LargestKeyFromMapBasedOnValue {
         map.put("Prasad", 18);
         map.put("Kumud", 13);
 
-        System.out.println(map.values());
+        TreeMap<String, Integer> tree = new TreeMap<>(map);
+        System.out.println(tree);
+
+        Integer valueToFind = 18;
+        String keyFound = null;
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            if (entry.getValue().equals(valueToFind)) {
+                keyFound = entry.getKey();
+                break; // Stop after finding the first match
+            }
+        }
+
+        if (keyFound != null) {
+            System.out.println("Key for value '" + valueToFind + "' is: " + keyFound);
+        } else {
+            System.out.println("Value '" + valueToFind + "' not found.");
+        }
+
     }
     }
