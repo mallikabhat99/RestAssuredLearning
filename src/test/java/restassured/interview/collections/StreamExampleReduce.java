@@ -14,7 +14,7 @@ public class StreamExampleReduce {
         int sum = num.stream().reduce(0, Integer::sum);
         System.out.println(sum);
 
-        int max = num.stream().reduce(0,Integer::max);
+        int max = num.stream().reduce(1,Integer::max);
         System.out.println(max);
 
         int min = num.stream().reduce(5,Integer::min);
@@ -24,6 +24,9 @@ public class StreamExampleReduce {
 
         System.out.println("The product of the numbers is: " + product); //
 
+        List<String> namesMap = Arrays.asList("aLice", "bOb", "chArlie");
+        String concat = namesMap.stream().reduce(" ", (str1,str2)->(str1+"-"+str2));
+        System.out.println(concat);
 
     }
 }
