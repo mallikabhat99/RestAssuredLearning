@@ -2,9 +2,7 @@ package restassured.interview.collections;
 import java.util.*;
 
 public class BinarySearch {
-
     public static void main(String[] args) {
-
         List<String> list = new ArrayList<>();
         // Adding elements to object
         // using add() method
