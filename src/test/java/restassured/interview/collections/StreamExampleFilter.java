@@ -41,6 +41,5 @@ public class StreamExampleFilter {
         System.out.println(evenNumbers);
         System.out.println(oddNumbers);
 
-
     }
 }

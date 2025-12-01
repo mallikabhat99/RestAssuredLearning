@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class VowelConsonant {
     public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
-
         System.out.print("Enter a character: ");
 
         // take only the first character

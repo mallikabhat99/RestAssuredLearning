@@ -28,7 +28,5 @@ public class StreamExampleMap {
                 .map(n-> n*n)
                 .collect(Collectors.toList());
         System.out.println(sqaure);
-
-
     }
 }

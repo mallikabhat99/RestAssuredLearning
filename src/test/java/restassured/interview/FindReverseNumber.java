@@ -3,7 +3,7 @@ package restassured.interview;
 public class FindReverseNumber {
     public static void main(String[] args) {
         //number defined
-        int number = 1234;
+        int number = 5656;
         int reversedNumber = 0;
         int temp = 0;
 
@@ -19,3 +19,4 @@ public class FindReverseNumber {
         System.out.println("Reversed Number is: " + reversedNumber);
     }
 }
+//ok

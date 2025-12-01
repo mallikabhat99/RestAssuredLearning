@@ -25,7 +25,6 @@ public class StreamExampleSorting {
                 .collect(Collectors.toList());
         System.out.println(sortedNumbers);
 
-
         List<String> names = Arrays.asList("Alice", "Charlie", "Bob");
         List<String> sortedNamesDesc = names.stream()
                 .sorted(Comparator.reverseOrder()) // Sorts in descending order

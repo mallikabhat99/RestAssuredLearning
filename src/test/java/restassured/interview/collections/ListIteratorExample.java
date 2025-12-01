@@ -3,7 +3,6 @@ package restassured.interview.collections;
 import java.util.*;
 
 public class ListIteratorExample {
-
     public static void main(String[] args)
     {
         // list of names
@@ -13,11 +12,11 @@ public class ListIteratorExample {
         names.add("Geeksforgeeks");
 
         // Getting ListIterator
-        ListIterator<String> listIterator
-                = names.listIterator();
+        ListIterator<String> listIterator = names.listIterator();
 
         // Traversing elements
         System.out.println("Forward Direction Iteration:");
+
         while (listIterator.hasNext()) {
             String element = listIterator.next();
             System.out.println(element);

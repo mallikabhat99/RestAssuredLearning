@@ -9,7 +9,9 @@ public class StreamExampleReduce {
     public static void main(String[] args)
     {
 
-//Reducing: Aggregate elements into a single result (e.g., find the sum, product, maximum, or minimum of elements).
+//Reducing:
+// Aggregate elements into a single result
+// (e.g., find the sum, product, maximum, or minimum of elements).
         List<Integer> num = Arrays.asList(7, 2, 3, 4, 5);
         int sum = num.stream().reduce(0, Integer::sum);
         System.out.println(sum);
@@ -19,13 +21,15 @@ public class StreamExampleReduce {
 
         int min = num.stream().reduce(5,Integer::min);
         System.out.println(min);
+
         int product = num.stream()
                 .reduce(1, (a, b) -> a * b);
 
         System.out.println("The product of the numbers is: " + product); //
 
         List<String> namesMap = Arrays.asList("aLice", "bOb", "chArlie");
-        String concat = namesMap.stream().reduce(" ", (str1,str2)->(str1+"-"+str2));
+        String concat = namesMap.stream()
+                .reduce(" ", (str1,str2)->(str1+"-"+str2));
         System.out.println(concat);
 
     }

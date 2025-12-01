@@ -25,9 +25,6 @@ public class SetBasics {
         set.clear();
         System.out.println("Is set empty " + set.isEmpty());
 
-
-
-
         Set<String> fruits = new HashSet<>();
 
         // Add elements to the Set
@@ -42,8 +39,6 @@ public class SetBasics {
         // Check if the Set contains "Grape"
         boolean hasGrape = fruits.contains("Grape");
         System.out.println("Does the set contain \"Grape\"? " + hasGrape);
-
-
 
     }
 }

@@ -5,14 +5,12 @@ import java.util.*;
 class Sorting {
 
     public static void main(String[] args) {
-
         List<String> l = new ArrayList<>();
 
         // Adding elements to the list
         // using add() method
         l.add("Shoes");
         l.add("Toys");
-
         // Adding one or more
         // element using addAll()
         Collections.addAll(l, "Fruits", "Bat", "Mouse");

@@ -12,3 +12,4 @@ public class SwapStrings {
         System.out.println(s2);
     }
 }
+//ok

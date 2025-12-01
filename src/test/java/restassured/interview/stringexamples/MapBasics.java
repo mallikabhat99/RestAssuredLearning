@@ -17,9 +17,6 @@ public class MapBasics {
         map.putAll(map2);
         System.out.println(map);
 
-
-
-
         Map<String, String> mapA = new HashMap<>();
         mapA.put("A", "Apple");
         mapA.put("B", "Boy");
@@ -27,8 +24,6 @@ public class MapBasics {
         mapA.replace("C", "Element");
         mapA.remove("A","Apple");
         System.out.println(map);
-
-
 
         Map<String, String> mapC = new HashMap<>();
         mapC.put("V", "Violet");

@@ -14,3 +14,4 @@ public class StringWhitespaceRemoval {
         System.out.println("s2.strip():  ===\"" + s2.strip() + "\"==="); // strip will remove U+2003
     }
 }
+//ok

@@ -13,14 +13,10 @@ public class StreamExampleCollecting {
                 .collect(Collectors.groupingBy(String::length));
         System.out.println(groupBySize);
 
-
         Map<Character, List<String>> groupedByFirstLetter = words.stream()
                 .sorted()
                 .collect(Collectors.groupingBy(s -> s.charAt(0)));
         System.out.println(groupedByFirstLetter);
-
-
-
         List<String> fruits = Arrays.asList("apple", "banana", "orange", "apple", "grape","banana");
         // Collect the stream elements into a Set
         Set<String> stringSet = fruits.stream().collect(Collectors.toSet());

@@ -22,3 +22,4 @@ public class SwapMap {
         System.out.println("Swapped map: " + swappedMap);
     }
 }
+//ok

@@ -9,7 +9,6 @@ public class ArrayBasics {
         myName[0] = "Mallika";
         myName[1] = "Bhat";
         String[] prasadName = {"Prasad","Kini"};
-
         System.out.println(Arrays.toString(myName));
         System.out.println(Arrays.toString(prasadName));
         System.out.println(Arrays.asList(myName));

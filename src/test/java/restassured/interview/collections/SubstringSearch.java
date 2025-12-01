@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SubstringSearch {
-
     public static void main(String[] args) {
         String target = "hero";
         List<String> wordList = List.of("mass", "as", "hero", "superhero");

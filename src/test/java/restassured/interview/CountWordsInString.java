@@ -5,7 +5,6 @@ import java.util.Set;
 
 public class CountWordsInString {
     public static void main(String[] args) {
-
         String sentence = "Mallika Bhat Java Automation Bhat Java Here We are not Bhat checking Java";
         String[] words = sentence.split(" ");
         HashMap<String,Integer> map = new HashMap<>();
@@ -27,3 +26,4 @@ System.out.println(map);
 
     }
 }
+//ok

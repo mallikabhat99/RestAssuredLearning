@@ -13,7 +13,6 @@ class IterateUsingforEach {
         list.add("Geeks");
         list.add("for");
         list.add("Geeks");
-
         list.forEach((element)->{
             System.out.println(element);
         });

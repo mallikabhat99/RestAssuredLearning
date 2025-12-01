@@ -19,4 +19,4 @@ public class PrimeNumbers {
         }
     }
 }
-
+//0k

@@ -18,8 +18,7 @@ class Anagram {
     public static void main(String[] args) {
         String s1 = "gee1ks";
         String s2 = "kseeg";
-
-        if(areAnagrams(s1, s2) == true){
+        if(areAnagrams(s1, s2)){
             System.out.println("true");
         }
         else{

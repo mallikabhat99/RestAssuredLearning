@@ -50,3 +50,4 @@ public class InterestCalculator {
         in.close(); // Close the scanner
     }
 }
+//ok

@@ -6,7 +6,6 @@ public class BinarySearch {
     public static void main(String[] args) {
 
         List<String> list = new ArrayList<>();
-
         // Adding elements to object
         // using add() method
         list.add("Shoes");
@@ -23,7 +22,6 @@ public class BinarySearch {
         System.out.println(
                 "The index of Horse is: "
                         + Collections.binarySearch(list, "Horse"));
-
         // BinarySearch on the List
         System.out.println(
                 "The index of Dog is: "

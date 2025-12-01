@@ -4,7 +4,6 @@ import java.util.StringJoiner;
 
 public class StringBasics {
     public static void main(String[] args) {
-
         String str1 = "Mallika Bhat";
         String str2 = new String("Bhat    Mallika   ");
 

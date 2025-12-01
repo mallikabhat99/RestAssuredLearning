@@ -41,7 +41,6 @@ public class ArrayLists {
         //list.isEmpty();
         //list.contains(o);
 
-
         List<Integer> listRev = new ArrayList<>();
         listRev.add(20);
         listRev.add(10);
