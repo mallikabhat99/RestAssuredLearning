@@ -11,7 +11,7 @@ public class StreamExampleReduce {
 
 //Reducing:
 // Aggregate elements into a single result
-// (e.g., find the sum, product, maximum, or minimum of elements).
+// (e.g., find the sum, product, maximum, or minimum of elements). concat strings
         List<Integer> num = Arrays.asList(7, 2, 3, 4, 5);
         int sum = num.stream().reduce(0, Integer::sum);
         System.out.println(sum);
@@ -29,7 +29,7 @@ public class StreamExampleReduce {
 
         List<String> namesMap = Arrays.asList("aLice", "bOb", "chArlie");
         String concat = namesMap.stream()
-                .reduce(" ", (str1,str2)->(str1+"-"+str2));
+                .reduce(" ", (str1,str2)->(str1+" "+str2));
         System.out.println(concat);
 
     }

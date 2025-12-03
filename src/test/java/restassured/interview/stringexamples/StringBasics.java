@@ -12,7 +12,6 @@ public class StringBasics {
 
         System.out.println(str1);
         System.out.println(str2);
-
         //String to integer
         String str3 = "123";
         int value = Integer.parseInt(str3);

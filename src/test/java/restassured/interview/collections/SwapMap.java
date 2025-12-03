@@ -11,8 +11,7 @@ public class SwapMap {
         originalMap.put(3, "three");
 
         System.out.println("Original map: " + originalMap);
-
-        // New Map: Key is String, Value is Integer
+    // New Map: Key is String, Value is Integer
         Map<String, Integer> swappedMap = new HashMap<>();
 
         // Iterate and swap
